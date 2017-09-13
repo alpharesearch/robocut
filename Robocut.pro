@@ -38,6 +38,11 @@ FORMS += MainWindow.ui \
 
 QMAKE_CXXFLAGS += -std=c++11
 
+QMAKE_CPPFLAGS *= $(shell dpkg-buildflags --get CPPFLAGS)
+QMAKE_CFLAGS   *= $(shell dpkg-buildflags --get CFLAGS)
+QMAKE_CXXFLAGS *= $(shell dpkg-buildflags --get CXXFLAGS)
+QMAKE_LFLAGS   *= $(shell dpkg-buildflags --get LDFLAGS)
+
 DEFINES += ROBOCUT_VERSION=\\\"$$VERSION\\\"
 
 unix:LIBS += -lusb-1.0
@@ -60,7 +65,6 @@ DISTFILES += \
     images/cap-yellow.png \
     images/icon.png \
     images/robocut.xpm \
-    images/robocut.xcf \
     images/cap.xcf \
     images/pen.xcf \
     examples/a4_reg-marks_h260.svg \
