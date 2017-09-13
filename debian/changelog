@@ -1,0 +1,45 @@
+robocut (1.0.11-1) unstable; urgency=low
+
+  * Windows and OSX binaries released for first time
+  * Add in-tree libusb for Windows. Not the best practice but it is only
+     two files.
+  * Added Transform_Silhouette_Cameo() to rotate the plot as SVG onscreen. 
+  Allow left aligned paper. Cameo has high x-coordinates to the left, 
+     although the head homes at the left side.
+  * Added File->Reload (CTRL-L), this saves a lot of clicking and scrolling
+     through the file dialogue while adjusting the design.
+  * Added View->Identify to print the devices seen to stdout. This option
+     is temporarily hidden in the menu (via the .ui file) until it does
+     something user-visible.
+  * Refactored UsbOpen() / UsbInit() from Plotter.cpp:Cut().
+  * Added to about message and tooltip. Removed debug page dump on stdout;
+  * robocut.spec added, as used in 
+  https://build.opensuse.org/package/show?package=robocut&project=home:jnweiger
+  * Move all information to Readme.md rather than spreading it out over 
+    multiple files.
+  * Maybe very slightly better icon? It's still pretty rubbish! 
+    Contributions welcome!
+  * Change links to point to http://robocut.org/
+  * Code style fixes
+  * Mouse zoom is the "standard" way now.
+  * Mouse zooms to the cursor.
+  * QT5 support
+  * Fixed missing image files.
+  * Add USB ID 111A for CC300-20 Craft Robo Lite as another default.
+
+ -- Markus Schulz <schulz@alpharesearch.de>  Wed, 13 Sep 2017 11:42:47 -0400
+
+robocut (1.0.8-1) unstable; urgency=low
+
+  * Add two more example registration mark files
+  * Add USB ID 111C as another default
+  * add debian/README.source
+  * removed $SOURCES/usr/share/qt4/mkspecs files
+
+ -- Markus Schulz <schulz@alpharesearch.de>  Sat, 06 Aug 2011 03:33:00 -0500
+
+robocut (1.0.6-1) unstable; urgency=low
+
+  * Initial release. (Closes: #605345)
+
+ -- Markus Schulz <schulz@alpharesearch.de>  Sun, 28 Nov 2010 18:53:28 -0500

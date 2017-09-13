@@ -50,7 +50,7 @@ QT += svg
 RESOURCES += \
     resources.qrc
 
-QMAKE_COPY += \
+DISTFILES += \
     readme.txt \
     install.txt \
     changelog \
@@ -63,9 +63,9 @@ QMAKE_COPY += \
     images/robocut.xcf \
     images/cap.xcf \
     images/pen.xcf \
-    examples/letter_reg-marks.svg
-
-DISTFILES += \
+    examples/a4_reg-marks_h260.svg \
+    examples/legal_reg-marks_h310.svg \
+    examples/letter_reg-marks.svg \
     robocut.spec \
     Readme.md
 

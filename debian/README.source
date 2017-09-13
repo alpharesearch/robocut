@@ -1,0 +1,29 @@
+This is what I do to build a new version and a new package.
+* checkout master
+    If there need to be new program version:
+    * change version number in Robocut.pro and main.cpp
+
+* To create a new tar file I do this: 
+    qmake 
+    make -j
+    make clean
+    make release 
+      
+* checkout debian branch
+
+* some steps now are done via the autodist.sh script, like:
+    * call dch -i
+    * use help2man --name="is used with cutting plotters." -N ./robocut -i ./manfile.txt -o ./debian/robocut.1
+    * create a ddist folder and copy the tar.gz file in this folder and rename it to orig.tar.gz and build
+        mkdir ddist
+        cp robocut*.tar.gz ./ddist/
+        cd ddist
+        tar -xvzf robocut*.tar.gz 
+        rename -v 's/\.tar\.gz$/\.orig\.tar\.gz/' *.tar.gz
+        cd robocut*
+        mkdir debian
+        cd ../..
+        cp -r ./debian/* ./ddist/robocut*/debian
+        cd ddist
+        cd robocut*
+        debuild -S

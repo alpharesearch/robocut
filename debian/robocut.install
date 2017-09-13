@@ -1,0 +1,6 @@
+### example for for the registration marks 
+examples/letter_reg-marks.svg	/usr/share/robocut
+examples/a4_reg-marks_h260.svg	/usr/share/robocut
+examples/legal_reg-marks_h310.svg	/usr/share/robocut
+### Menus, icons
+debian/misc/robocut.desktop	/usr/share/applications

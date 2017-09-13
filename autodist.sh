@@ -1,36 +1,38 @@
 rm robocut*.tar.gz
-#rm -r ./ddist/
-#rm -r ./.tmp/
+rm -r ./ddist/
+rm -r ./.tmp/
 #./autogen.sh
 #./configure
 #dpkg-depcheck -d ./configure # to find what libs to use in control file
 make distclean
-qmake
-make -j
-#help2man --name="is used with cutting plotters." -N ./robocut -i ./manfile.txt -o ./debian/robocut.1
+qmake -qt5
+make -j 8
+help2man --name="is used with cutting plotters." -N ./robocut -i ./manfile.txt -o ./debian/robocut.1
 make dist
-#mkdir ddist
-#cp robocut*.tar.gz ./ddist/
-#cd ddist
-#tar -xvzf robocut*.tar.gz 
-#rename -v 's/\.tar\.gz$/\.orig\.tar\.gz/' *.tar.gz
-#rename -v 's/robocut/robocut_/' *.tar.gz
-#cd robocut*
-#mkdir debian
-#cd ../..
-#cp -r ./debian/* ./ddist/robocut*/debian
-#cd ddist
-#cd robocut*
+mkdir ddist
+cp robocut*.tar.gz ./ddist/
+cd ddist
+tar -xvzf robocut*.tar.gz 
+rename -v 's/\.tar\.gz$/\.orig\.tar\.gz/' *.tar.gz
+rename -v 's/robocut/robocut_/' *.tar.gz
+cd robocut*
+mkdir debian
+cd ../..
+cp -r ./debian/* ./ddist/robocut*/debian
+cd ddist
+cd robocut*
 # lucid maverick unstable
-#dch -i
-#DIST=sid ARCH=amd64 pdebuild
-#dpkg-buildpackage
-#debuild -S
-#debuild
-#cd ..
-#lintian -Ivi *.changes
-#ls -l
-#exit
+# dch -i
+DIST=sid ARCH=amd64 pdebuild
+dpkg-buildpackage
+debuild -S
+debuild
+cd ..
+lintian -Ivi *.changes
+ls -l
+cd robocut*
+sbuild
+exit
 
 #cd xsublim*
 #DIST=sid ARCH=i386 pdebuild

@@ -86,7 +86,7 @@ Error UsbSend(libusb_device_handle* handle, const string& s, int timeout = 0)
 		if ((unsigned int)transferred != data.length())
 		{
 			cerr << "Warning, some data not transferred correctly." << endl;
-			return Error("Some data not transfered. Attempted: " + ItoS(data.length()) + " Transferred: " + ItoS(transferred));
+			return Error("Some data not transferred. Attempted: " + ItoS(data.length()) + " Transferred: " + ItoS(transferred));
 		}
 	}
 	return Success;
