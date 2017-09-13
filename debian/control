@@ -2,8 +2,7 @@ Source: robocut
 Section: graphics
 Priority: optional
 Maintainer: Markus Schulz <schulz@alpharesearch.de>
-Depends: libqt5gui5, libqt5svg5, libqt5core5a, libqt5widgets5
-Build-Depends: debhelper (>= 9), quilt, qtbase5-dev, libusb-1.0-0-dev, libqt5svg5-dev
+Build-Depends: debhelper (>= 9), qtbase5-dev, libusb-1.0-0-dev, libqt5svg5-dev
 Standards-Version: 3.9.7
 Homepage: https://code.launchpad.net/robocut
 Vcs-Git: https://github.com/alpharesearch/robocut.git
@@ -14,6 +13,6 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Control program for Graphtec cutting plotters
  Robocut is a simple graphical program to allow you to cut graphics with a 
- Graphtec Craft Robo 2 Vinyl Cutter model CC220-20 and Sihouette SD. It can
+ Graphtec Craft Robo 2 Vinyl Cutter model CC220-20 and Silhouette SD. It can
  read SVG files produced by Inkscape, but it should also work with other 
  SVG files.

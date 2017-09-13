@@ -21,9 +21,9 @@ cd ../..
 cp -r ./debian/* ./ddist/robocut*/debian
 cd ddist
 cd robocut*
-# lucid maverick unstable
+# xenial unstable
 # dch -i
-DIST=sid ARCH=amd64 pdebuild
+DIST=unstable ARCH=amd64 pdebuild
 dpkg-buildpackage
 debuild -S
 debuild
@@ -32,6 +32,10 @@ lintian -Ivi *.changes
 ls -l
 cd robocut*
 sbuild
+#debsign
+#cd ..
+#dput mentors robocut_1.0.11-1_amd64.changes 
+
 exit
 
 #cd xsublim*

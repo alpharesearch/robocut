@@ -1,8 +1,8 @@
 robocut (1.0.11-1) unstable; urgency=low
 
-  * Windows and OSX binaries released for first time
-  * Add in-tree libusb for Windows. Not the best practice but it is only
-     two files.
+  * fixed spelling bug (Closes: #657050)
+  * fixed git url (Closes: #867053)
+  * QT5 support (Closes: #875173)
   * Added Transform_Silhouette_Cameo() to rotate the plot as SVG onscreen. 
   Allow left aligned paper. Cameo has high x-coordinates to the left, 
      although the head homes at the left side.
@@ -15,15 +15,12 @@ robocut (1.0.11-1) unstable; urgency=low
   * Added to about message and tooltip. Removed debug page dump on stdout;
   * robocut.spec added, as used in 
   https://build.opensuse.org/package/show?package=robocut&project=home:jnweiger
-  * Move all information to Readme.md rather than spreading it out over 
-    multiple files.
   * Maybe very slightly better icon? It's still pretty rubbish! 
     Contributions welcome!
   * Change links to point to http://robocut.org/
   * Code style fixes
   * Mouse zoom is the "standard" way now.
   * Mouse zooms to the cursor.
-  * QT5 support
   * Fixed missing image files.
   * Add USB ID 111A for CC300-20 Craft Robo Lite as another default.
 
