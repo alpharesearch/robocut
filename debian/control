@@ -2,6 +2,7 @@ Source: robocut
 Section: graphics
 Priority: optional
 Maintainer: Markus Schulz <schulz@alpharesearch.de>
+Depends: libqt5gui5, libqt5svg5, libqt5core5a, libqt5widgets5
 Build-Depends: debhelper (>= 9), quilt, qtbase5-dev, libusb-1.0-0-dev, libqt5svg5-dev
 Standards-Version: 3.9.7
 Homepage: https://code.launchpad.net/robocut
