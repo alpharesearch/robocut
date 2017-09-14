@@ -1,9 +1,10 @@
 # Run the "uscan" command
 
 # Compulsory line, this is a version 3 file
-version=3
+version=4
 
-#see Launchpad Bug #231797 
+#see Launchpad Bug #231797
+#https://wiki.debian.org/debian/watch
 opts=pgpsigurlmangle=s/$/.asc/ \
   https://launchpad.net/robocut/ \ 
-  https://launchpad.net/.*download/robocut-([.\d]+)\.tar\.xz
+  https://launchpad.net/.*download/robocut([.\d]+)\.tar\.gz
