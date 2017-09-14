@@ -3,7 +3,7 @@ Section: graphics
 Priority: optional
 Maintainer: Markus Schulz <schulz@alpharesearch.de>
 Build-Depends: debhelper (>= 9), qtbase5-dev, libusb-1.0-0-dev, libqt5svg5-dev
-Standards-Version: 3.9.7
+Standards-Version: 3.9.8
 Homepage: https://code.launchpad.net/robocut
 Vcs-Git: https://github.com/alpharesearch/robocut.git
 Vcs-Browser: https://github.com/alpharesearch/robocut

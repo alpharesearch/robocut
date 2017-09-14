@@ -4,4 +4,6 @@
 version=3
 
 #see Launchpad Bug #231797 
-https://launchpad.net/robocut/+download http://launchpad.net/robocut/systemtest/.*/robocut_(.*)\.tar\.gz
+opts=pgpsigurlmangle=s/$/.asc/ \
+  https://launchpad.net/robocut/ \ 
+  https://launchpad.net/.*download/robocut-([.\d]+)\.tar\.xz

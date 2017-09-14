@@ -32,9 +32,9 @@ lintian -Ivi *.changes
 ls -l
 cd robocut*
 sbuild
-#debsign
-#cd ..
-#dput mentors robocut_1.0.11-1_amd64.changes 
+debsign
+cd ..
+dput mentors robocut_1.0.11-1_amd64.changes 
 
 exit
 
