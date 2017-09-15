@@ -15,26 +15,24 @@ cd ddist
 tar -xvzf robocut*.tar.gz 
 rename -v 's/\.tar\.gz$/\.orig\.tar\.gz/' *.tar.gz
 rename -v 's/robocut/robocut_/' *.tar.gz
-cd robocut*
+cd robocut1*1
 mkdir debian
 cd ../..
 cp -r ./debian/* ./ddist/robocut*/debian
 cd ddist
-cd robocut*
+cd robocut1*1
 # xenial unstable
 # dch -i
-DIST=unstable ARCH=amd64 pdebuild
-dpkg-buildpackage
-debuild -S
-debuild
-cd ..
-lintian -Ivi *.changes
-ls -l
-cd robocut*
+#DIST=unstable ARCH=amd64 pdebuild
+#dpkg-buildpackage
+#debuild -S
+#debuild
 sbuild
 debsign
 cd ..
-dput mentors robocut_1.0.11-1_amd64.changes 
+lintian -Ivi *.changes
+ls -l
+#dput mentors robocut_1.0.11-1_amd64.changes 
 
 exit
 
